@@ -1,0 +1,1 @@
+let friends = [ "Spencer", "Katie", "Allie", "Roxanne", "Meghan"]
