@@ -1,0 +1,31 @@
+body {
+    background-color: azure;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    color: darkslategray;
+    font-family: "Bebas Neue", sans-serif;
+
+}
+
+.friend {
+    background-color: honeydew;
+    margin: auto;
+    padding: 2em;
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    color: darkslategray;
+    border: 5px solid slategray;
+    border-radius: 25px;
+}
+
+.friend > h3 {
+    text-transform:uppercase;
+    font-size: larger;
+}
+
+#red {
+    color: orangered;
+}
