@@ -1,35 +1,71 @@
-let friends = ["Spencer", "Katie", "Allie", "Roxanne", "Meghan"];
+let button = document.querySelector("button");
 
-theLineSong = (friends) => {
+button.addEventListener("click", function () {
+  let friends = ["Spencer", "Katie", "Allie", "Roxanne", "Meghan"];
   let lines = "lines";
+  for (let i = 0; i < friends.length; i++) {
+    let eachFriend = document.createElement("div");
+    eachFriend.className = "friend";
 
-  for (counter = 99; counter >= 1; counter--) {
-    if (counter === 1) {
-      lines = "line";
-    } else {
-      lines = "lines";
-    }
+  let friendsName = document.createElement("h3");
+  let friendsNameText = document.createTextNode(friends[i]);
+  friendsName.appendChild(friendsNameText);
+  eachFriend.appendChild(friendsName);
 
-    if (counter <= 99) {
-      console.log(counter + " " + lines + " of code in the file,");
-      console.log(counter + " " + lines + " of code.");
-      console.log(friends + " deletes one!");
-      console.log("Can’t command Z now.");
-      if (counter > 2) {
-        console.log(counter - 1 + " " + lines + " of code in the file.");
-      }
-      if (counter === 2) {
-        let lines = "line";
-        console.log(counter - 1 + " " + lines + " of code in the file.");
-      }
+    for (counter = 99; counter >= 1; counter--) {
+      
       if (counter === 1) {
-        console.log("0 lines of code in the file!");
+        lines = "line";
+      } else {
+        lines = "lines";
       }
-      console.log(" ");
-    }
-  }
-};
+     
+      if (counter <= 99) {
+        let line = document.createElement('p')
+        let line2 = document.createElement('p')
+        let line3 = document.createElement('p')
+        let line4 = document.createElement('p')
+        let line51 = document.createElement('p')
+        let line52 = document.createElement('p')
+        let line53 = document.createElement('p')
+        let line6 = document.createElement('p')
+        
+        line.innerHTML = (counter + " " + lines + " of code in the file,");
+        line2.innerHTML = (counter + " " + lines + " of code.");
+        line3.innerHTML = (friends[i] + " deletes one!");
+        line4.innerHTML = ("Can’t command Z now.");
 
-for (let i = 0; i < friends.length; i++) {
-  theLineSong(friends[i]);
+        eachFriend.appendChild(line)
+        eachFriend.appendChild(line2)
+        eachFriend.appendChild(line3)
+        eachFriend.appendChild(line4)
+      
+        if (counter > 2) {
+          
+          line51.innerHTML = (counter - 1 + " " + lines + " of code in the file.");
+          eachFriend.appendChild(line51)
+        }
+        if (counter === 2) {
+          let lines = "line";
+          line52.innerHTML = (counter - 1 + " " + lines + " of code in the file.");
+          eachFriend.appendChild(line52)
+        }
+        if (counter === 1) {
+          line53.innerHTML = ("0 lines of code in the file!");
+          eachFriend.appendChild(line53)
+        }
+        
+
+      }
+    }
+  // }
+  document.body.appendChild(eachFriend)
+  
+
+
+
 }
+
+ 
+ 
+});
